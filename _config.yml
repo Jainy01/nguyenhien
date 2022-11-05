@@ -5,7 +5,7 @@ tagline: "Your sidekick in using GitHub Pages and blogs"
 description: "Learn how to create a site or blog from your GitHub repositories with GitHub Pages."
 template:
   name: "github-pages-with-jekyll"
-  url: "https://github.com/githubtraining/github-pages-with-jekyll-template.git"
+  url: "https://jainy01.github.io/nguyenthihien/"
 before:
   - type: updateBranchProtection
   - type: createIssue
@@ -15,7 +15,7 @@ steps:
   - title: "Enable GitHub Pages"
     description: "Turn on GitHub Pages in your repository."
     event: "deployment_status"
-    link: "https://github.com/{{ user.username }}/{{ course.template.name }}/issues/1"
+    link: "https://jainy01.github.io/nguyenthihien/"
     actions:
       - type: gate
         left: '%payload.deployment_status.state%'
@@ -34,7 +34,8 @@ steps:
   - title: "Customize your homepage"
     description: "Open a pull request with changes to the hompage."
     event: "pull_request.opened"
-    link: "https://github.com/{{ user.username }}/{{ course.template.name }}/issues"
+    link: "https://jainy01.github.io/nguyenthihien/"
+    
     actions:
       - type: gate
         left: '%payload.pull_request.body%'
@@ -94,7 +95,7 @@ steps:
   - title: "Add a theme"
     description: "Using the theme chooser, select a theme for your site."
     event: "push"
-    link: "https://github.com/{{ user.username }}/{{ course.template.name }}/issues"
+    link: "https://github.com/{{ jainy01.github.io/nguyenthihien/ }}/{{ course.template.name }}/issues"
     actions:
       - type: getFileContents
         filename: _config.yml
